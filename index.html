@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>KODEX TAROT – Dimensional Intelligence</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="4-Dimensional Tarot powered by RK 2×2 Protocol × Swiss Ephemeris Timing" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" href="images/icons/icon-192.png" />
+  <meta name="theme-color" content="#0a0014" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>KODEX TAROT</h1>
+    <p>Powered by RK 2×2 Protocol × Swiss Ephemeris Timing</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <textarea id="question" placeholder="What guidance do you seek? (optional)"></textarea>
+
+      <div class="btn-group">
+        <button id="dailyBtn" class="primary">Daily Free Reading</button>
+        <button id="upgradeBtn" class="premium">Upgrade to Premium – $4.99/mo</button>
+      </div>
+
+      <div class="btn-group spread-btns">
+        <button class="spread-btn" data-spread="3">3-Card Spread</button>
+        <button class="spread-btn" data-spread="5">5-Card Spread</button>
+        <button class="spread-btn" data-spread="7">7-Card Spread</button>
+      </div>
+    </section>
+
+    <section id="cards" class="card-row"></section>
+
+    <section id="output" class="reading-box"></section>
+
+    <section class="actions">
+      <button id="shareBtn">Share Reading</button>
+      <button id="historyBtn">Reading History</button>
+      <button id="exportBtn">Export History</button>
+    </section>
+
+    <section id="history" class="history-panel"></section>
+  </main>
+
+  <footer>
+    <small>
+      KODEX TAROT provides educational timing insights and symbolic interpretation. Readings do not guarantee outcomes and are not financial, medical, or legal advice. You are responsible for your own decisions.
+    </small>
+    <nav>
+      <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:kodextarot@gmail.com">Contact</a>
+    </nav>
+  </footer>
+
+  <!-- MODULES -->
+  <script src="tarot-cards.js"></script>
+  <script src="rk-protocol.js"></script>
+  <script src="cosmic-timing.js"></script>
+  <script src="payment.js"></script>
+  <script src="app.js"></script>
+
+  <!-- SERVICE WORKER REGISTER -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
