@@ -1,0 +1,10 @@
+/* Spread buttons visible */
+.spread-btns button {
+  color: #FFD700;
+  background: #160028;
+  border: 1px solid #6b46c1;
+}
+.spread-btns button:hover {
+  background: #6b46c1;
+  color: #FFFFFF;
+}
